@@ -21,6 +21,10 @@ public class Hero {
         return name;
     }
 
+    public int getHealth() {
+        return pv;
+    }
+
     public Weapon equipWeapon( Weapon weapon) {
         return heroWeapon = weapon;
     }
@@ -30,6 +34,6 @@ public class Hero {
     }
 
     public int takeDamages ( int pv, Weapon heroWeapon) {
-        return Math.subtractExact(pv, heroWeapon.getMaxDamages());
+        return pv = Math.subtractExact(pv, heroWeapon.getMaxDamages());
     }
 }

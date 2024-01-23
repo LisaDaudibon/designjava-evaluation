@@ -20,7 +20,7 @@ public class Enemy {
         return provocationSentence;
     }
 
-    public int getPv() {
+    public int getHealth() {
         return pv;
     }
 
