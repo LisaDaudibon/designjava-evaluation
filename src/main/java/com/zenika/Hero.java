@@ -1,28 +1,21 @@
 package com.zenika;
 
-public class Hero {
-    private String name;
+import java.util.Random;
+
+public class Hero extends Character implements Fighter {
     private String originStory;
     private Weapon heroWeapon;
-    private int pv;
+
+    private int damagesDealt;
 
     public Hero(String name, String originStory) {
-        this.name = name;
+        super(name);
         this.originStory = originStory;
         this.heroWeapon = null;
-        this.pv = 100;
     }
 
     public String getOriginStory() {
         return originStory;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getHealth() {
-        return pv;
     }
 
     public Weapon equipWeapon( Weapon weapon) {
@@ -32,8 +25,13 @@ public class Hero {
     public Weapon getWeapon(){
         return heroWeapon;
     }
-
-    public int takeDamages ( int pv, Weapon heroWeapon) {
-        return pv = Math.subtractExact(pv, heroWeapon.getMaxDamages());
+    @Override
+    public int dealDamages() {
+        if (heroWeapon == null) {
+            return damagesDealt = 0;
+        } else {
+            Random rand = new Random();
+            return damagesDealt = rand.nextInt(1, heroWeapon.getMaxDamages());
+        }
     }
 }
