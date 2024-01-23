@@ -11,6 +11,6 @@ public class Main {
 
         Story bestStoryEver = new Story(balourd, foretEnchantee, alfred);
         bestStoryEver.setTheStorysWeapon(balourd);
-        System.out.println(bestStoryEver);
+        bestStoryEver.storyTime(balourd, alfred);
     }
 }
