@@ -12,6 +12,10 @@ public class Story {
         this.theStorysEnemy = theStorysEnemy;
     }
 
+    public Weapon getTheStorysWeapon() {
+        return theStorysWeapon;
+    }
+
     public Weapon setTheStorysWeapon(Hero theStorysHero) {
         return theStorysWeapon = theStorysHero.equipWeapon(thePlaceOfTheStory.getLocalWeapon());
     }
